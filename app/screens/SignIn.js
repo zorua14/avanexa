@@ -10,7 +10,7 @@ const SignIn = () => {
     const [password, setPassword] = useState('');
     const navigation = useNavigation()
     const handleLogin = () => {
-        // Check if email and password are not empty
+
         if (email.trim() === '' || password.trim() === '') {
             Alert.alert('Error', 'Email and password cannot be empty.');
             return;
@@ -18,7 +18,6 @@ const SignIn = () => {
 
         // Dummy login function
         if (email.length > 0 && password.length > 0) {
-            // Alert.alert('Login Successful', `Welcome, ${email}!`);
             navigation.navigate('Home')
         } else {
             Alert.alert('Login Failed', 'Invalid email or password.');
